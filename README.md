@@ -1,8 +1,8 @@
-Hitwicket Player Profile for Hardik Pandya :
+Player Profile for Hardik Pandya :
 
 
       This project is a fully responsive Player Profile Dashboard inspired by Hitwicket.  
-      It presents detailed player information, achievements, badges, performance charts, and gamification-related insights          using a clean UI built in React.js.
+      It presents detailed player information, achievements, badges, performance charts, and gamification-related insights using a clean UI built in React.js.
 
 Live Site : https://hitwicket-player-profile.vercel.app/ 
 
