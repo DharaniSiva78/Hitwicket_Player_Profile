@@ -1,0 +1,222 @@
+.game-theme-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a0e17 0%, #1a2332 50%, #0f1624 100%);
+}
+
+.animated-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Floating Cricket Balls */
+.floating-cricket-balls {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cricket-ball {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.1;
+  animation: floatBall 25s infinite linear;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+@keyframes floatBall {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(50px, 50px) rotate(90deg) scale(1.2);
+  }
+  50% {
+    transform: translate(0, 100px) rotate(180deg) scale(1);
+  }
+  75% {
+    transform: translate(-50px, 50px) rotate(270deg) scale(0.8);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg) scale(1);
+  }
+}
+
+/* Pulse Effects */
+.pulse-effects {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.pulse-circle {
+  position: absolute;
+  border: 2px solid rgba(74, 144, 226, 0.1);
+  border-radius: 50%;
+  animation: pulse 8s infinite ease-in-out;
+}
+
+.circle-1 {
+  top: 20%;
+  left: 10%;
+  width: 300px;
+  height: 300px;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  top: 60%;
+  right: 15%;
+  width: 200px;
+  height: 200px;
+  animation-delay: 2s;
+}
+
+.circle-3 {
+  bottom: 20%;
+  left: 20%;
+  width: 400px;
+  height: 400px;
+  animation-delay: 4s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+}
+
+/* Glowing Orbs */
+.glowing-orbs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.glowing-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: glow 6s infinite ease-in-out;
+}
+
+.orb-1 {
+  top: 30%;
+  right: 10%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(74, 144, 226, 0.3) 0%, transparent 70%);
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  bottom: 40%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(229, 46, 113, 0.3) 0%, transparent 70%);
+  animation-delay: 2s;
+}
+
+.orb-3 {
+  top: 60%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(255, 193, 7, 0.3) 0%, transparent 70%);
+  animation-delay: 4s;
+}
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+/* Animated Stripes */
+.animated-stripes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.stripe {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+  animation: stripeMove 20s infinite linear;
+}
+
+.stripe-1 {
+  top: 20%;
+  width: 100%;
+  height: 2px;
+  animation-delay: 0s;
+}
+
+.stripe-2 {
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  animation-delay: 5s;
+}
+
+.stripe-3 {
+  top: 80%;
+  width: 100%;
+  height: 3px;
+  animation-delay: 10s;
+}
+
+@keyframes stripeMove {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Particle Effects */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: particleFall linear infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes particleFall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

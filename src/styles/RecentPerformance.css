@@ -1,0 +1,260 @@
+.recent-performance-panel {
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.performance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.performance-title {
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #ffffff 0%, #45B7D1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.win-rate {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.performance-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+}
+
+.matches-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.match-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.match-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.match-card.active {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #45B7D1;
+  box-shadow: 0 5px 20px rgba(69, 183, 209, 0.3);
+}
+
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.match-vs {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.match-result {
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.match-result.won {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+}
+
+.match-result.lost {
+  background: rgba(244, 67, 54, 0.2);
+  color: #F44336;
+}
+
+.match-date {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 5px;
+}
+
+.match-format {
+  font-size: 0.8rem;
+  color: #45B7D1;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.match-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.rating-value {
+  font-weight: bold;
+  color: #FFD93D;
+}
+
+.rating-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.match-xp {
+  font-size: 0.8rem;
+  color: #4ECDC4;
+  font-weight: 600;
+}
+
+.match-details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.detail-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.detail-title {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.performance-breakdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.performance-category {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.performance-category h4 {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.category-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.category-stats span {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.metrics-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.metrics-title {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.performance-metric {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.metric-label {
+  font-weight: 600;
+  color: white;
+}
+
+.metric-value {
+  font-size: 0.9rem;
+  color: #4ECDC4;
+  font-weight: bold;
+}
+
+.metric-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.metric-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4ECDC4, #45B7D1);
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .performance-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .matches-selector {
+    max-height: 200px;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  
+  .match-card {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .performance-breakdown {
+    grid-template-columns: 1fr;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}

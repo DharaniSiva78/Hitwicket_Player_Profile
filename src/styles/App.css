@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0a0e17;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.player-overview, .format-section, .achievements-section {
+  background: rgba(16, 22, 36, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    padding: 10px;
+  }
+  
+  .player-overview, .format-section, .achievements-section {
+    padding: 15px;
+  }
+}
+/* Add these new styles */
+.gamification-section {
+  margin-bottom: 30px;
+}
+
+.gamification-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.recent-performance-section {
+  margin-bottom: 30px;
+}
+
+.achievements-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .gamification-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .gamification-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievements-section {
+    gap: 20px;
+  }
+}
